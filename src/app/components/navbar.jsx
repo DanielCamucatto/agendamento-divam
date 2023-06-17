@@ -6,16 +6,16 @@ function Navbar() {
     <NavbarStyles.Nav className='header'>
       <NavbarStyles.Ul>
         <NavbarStyles.Li>
-          <Link href={'/'}>Home</Link>
+          <Link href='/'>Home</Link>
         </NavbarStyles.Li>
         <NavbarStyles.Li>
-          <Link href={'/'}>Agenda</Link>
+          <Link href='/'>Agenda</Link>
         </NavbarStyles.Li>
         <NavbarStyles.Li>
-          <Link href={'/'}>Psicologos</Link>
+          <Link href='/pages/users'>Psicologos</Link>
         </NavbarStyles.Li>
         <NavbarStyles.Li>
-          <Link href={'/'}>Meu Perfil</Link>
+          <Link href='/'>Meu Perfil</Link>
         </NavbarStyles.Li>
       </NavbarStyles.Ul>
     </NavbarStyles.Nav>

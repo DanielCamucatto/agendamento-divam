@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import theme from '../styles/theme';
+import theme from './theme';
 import Navbar from '../components/navbar';
 
 const GlobalStyles = createGlobalStyle`
@@ -23,6 +23,27 @@ const GlobalStyles = createGlobalStyle`
 
   .main {
     background-color: #e6e6e6;
+  }
+
+  .main-title {
+    font-size: 3rem;
+    font-weight:bold;
+    padding: 2rem;
+    background-image: linear-gradient(to bottom, ${theme.primaryColor}, ${theme.secondColor}, ${theme.varFourColor});
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: black;
+    text-transform:uppercase;
+  }
+
+  .invalid-input{
+    color: ${theme.dangerColor};
+    font-size: 12px;
+    font-weight:bold;
+    margin: 0 auto;
+    display: block;
+    width: 38%;
   }
 
   .input-box {

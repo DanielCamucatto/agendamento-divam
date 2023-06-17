@@ -4,8 +4,9 @@ import { Button } from '../styles/btnStyle'
 
 
 interface CustomButtonProps {
-  onClick: () => void;
+  onClick?: () => void;
   children: React.ReactNode;
+  as?: React.ElementType; 
 }
 
 const CustomButton: React.FC<CustomButtonProps> = ({ onClick, children }) => {
