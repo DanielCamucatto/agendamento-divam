@@ -6,7 +6,8 @@ const theme = {
     dangerColor: '#ff0077',
     colorWhite: '#fff', 
     colorGrey: '#ddd',
-    colorBlack: 'rgba(0, 0, 0, .8)'
+    colorBlack: 'rgba(0, 0, 0, .8)', 
+    colorAccept: '#008000', 
 }
 
 export default theme

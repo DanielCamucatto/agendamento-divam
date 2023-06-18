@@ -2,8 +2,8 @@
 import React, { ChangeEvent, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import CardWrapper from "../../styles/CardStyle";
-import Link from "next/link";
 import CustomButton from "@/app/components/button";
+import { format } from 'date-fns';
 
 export default function Agendamento() {
   const params = useSearchParams();
@@ -16,7 +16,7 @@ export default function Agendamento() {
 
 
   const [activeSection, setActiveSection] = useState('#about');
-  const [selectedDateTime, setSelectionDateTime] = useState<string | null>(null); 
+  const [selectedDateTime, setSelectionDateTime] = useState<string | null>(null);
   const [selectedOption, setSelectedOptions] = useState<string | null>(null);
   const [message, setMessage] = useState('');
 
@@ -24,12 +24,14 @@ export default function Agendamento() {
     setActiveSection(targetSection)
   }
 
-  const handleDateTimeChange = (e:ChangeEvent<HTMLInputElement>) => {
-    setSelectionDateTime(e.target.value);
+  const handleDateTimeChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const selectedDate = new Date(e.target.value);
+    const formattedDateTime = format(selectedDate, 'HH:mm dd/MM/yy');
+    setSelectionDateTime(formattedDateTime);
   }
 
   const handleAccept = () => {
-    setSelectedOptions('Aceitar'); 
+    setSelectedOptions('Aceitar');
     setMessage('Você agendou sua consulta');
   }
 
@@ -72,17 +74,18 @@ export default function Agendamento() {
           )}
           {activeSection === 'experience' && (
             <div className="card-content">
-              <div className="card-subtitle">Agende uma consulta</div>
-              <h3>Selecione o melhor dia e horário</h3>
+              <div className="card-subtitle">Agende sua consulta</div>
+              <h3 className="text-color-primary">Selecione o melhor dia e horário</h3>
               <p className="card-desc">
-                
+
               </p>
               <input type="datetime-local" name="" id="" onChange={handleDateTimeChange} />
               {selectedDateTime && (
                 <div>
-                  <p>Data e hora selecionadas: {selectedDateTime}</p>
-                  <button onClick={handleAccept}>Aceitar</button>
-                  <button onClick={handleDecline}>Recusar</button>
+                  <p className="text-color-primary">Você escolheu {selectedDateTime}.</p>
+                  <p className={selectedOption === 'Aceitar' ? 'accept' : 'decline'}>{message}</p>
+                  <button onClick={handleAccept}>Confirmar</button>
+                  <button onClick={handleDecline}>Rejeitar</button>
                 </div>
               )}
             </div>

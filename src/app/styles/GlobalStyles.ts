@@ -52,6 +52,19 @@ const GlobalStyles = createGlobalStyle`
     align-items: center;
   }
 
+  .accept {
+    color: ${theme.colorAccept}
+  }
+
+  .decline {
+    color: ${theme.dangerColor}
+  }
+
+  .text-color-primary {
+    color: ${theme.primaryColor};
+    font-weight: bold;
+  }
+
   .footer {
     background-color: #d9d9d9;
   }
