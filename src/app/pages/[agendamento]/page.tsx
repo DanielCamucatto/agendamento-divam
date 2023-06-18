@@ -3,6 +3,7 @@ import React, { ChangeEvent, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import CardWrapper from "../../styles/CardStyle";
 import CustomButton from "@/app/components/button";
+import DateTimeInput from "@/app/styles/inputTime";
 import { format } from 'date-fns';
 
 export default function Agendamento() {
@@ -79,7 +80,7 @@ export default function Agendamento() {
               <p className="card-desc">
 
               </p>
-              <input type="datetime-local" name="" id="" onChange={handleDateTimeChange} />
+              <DateTimeInput type="datetime-local" onChange={handleDateTimeChange} />
               {selectedDateTime && (
                 <div>
                   <p className="text-color-primary">Você escolheu {selectedDateTime}.</p>
