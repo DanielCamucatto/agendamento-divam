@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 import theme from './theme';
 
-export const Nav = styled.nav`
+export const FooterNav = styled.footer`
     display: flex;
     justify-content: center;
-    background-color: linear-gradient(90deg, ${theme.primaryColor}10%, ${theme.secondColor} 90%);
+    background-color: ${theme.colorBlack};
+    padding: 20px 0;
 `;
 
 export const Ul = styled.ul`
@@ -28,10 +29,10 @@ export const Li = styled.li`
   }
 `;
 
-const NavbarStyles = {
-  Nav,
+const FooterStyles = {
+  FooterNav,
   Ul,
   Li,
 };
 
-export default NavbarStyles;
+export default FooterStyles;

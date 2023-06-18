@@ -1,9 +1,13 @@
 import Link from 'next/link';
 import NavbarStyles from '../styles/NavbarStyles';
+import Icon from './icon';
 
 function Navbar() {
   return (
     <NavbarStyles.Nav className='header'>
+      <figure>
+      <Icon fill='#fff'/>
+      </figure>
       <NavbarStyles.Ul>
         <NavbarStyles.Li>
           <Link href='/'>Home</Link>

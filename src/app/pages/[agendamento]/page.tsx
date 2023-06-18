@@ -3,8 +3,7 @@ import React, { ChangeEvent, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import CardWrapper from "../../styles/CardStyle";
 import CustomButton from "@/app/components/button";
-import DateTimeInput from "@/app/styles/inputTime";
-import { format } from 'date-fns';
+import DateTimeInput from "@/app/styles/inputTime"; import { format } from 'date-fns';
 
 export default function Agendamento() {
   const params = useSearchParams();
