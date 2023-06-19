@@ -2,9 +2,10 @@ import styled from 'styled-components';
 import theme from './theme';
 
 const CardWrapper = styled.div`
+  display: grid;
 
   .card {
-    max-width: 340px;
+    max-width: 40vw;
     margin: auto;
     overflow-y: auto;
     position: relative;

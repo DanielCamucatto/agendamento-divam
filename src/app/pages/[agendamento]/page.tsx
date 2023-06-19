@@ -9,13 +9,12 @@ export default function Agendamento() {
   const params = useSearchParams();
   const paramsName = params.get('name');
   const paramsLastName = params.get('lastName');
-  const paramsNumber = params.get('number');
-  const paramsTempo = params.get('tempo');
   const paramsAtuacao = params.get('atuacao');
+  const paramAbout = params.get('about')
   const fullName = `${paramsName} ${paramsLastName}`
 
 
-  const [activeSection, setActiveSection] = useState('#about');
+  const [activeSection, setActiveSection] = useState('about');
   const [selectedDateTime, setSelectionDateTime] = useState<string | null>(null);
   const [selectedOption, setSelectedOptions] = useState<string | null>(null);
   const [message, setMessage] = useState('');
@@ -42,7 +41,7 @@ export default function Agendamento() {
 
   return (
     <CardWrapper>
-      <div className={`card ${activeSection === 'about' ? '' : 'is-active'}`} data-state={activeSection}>
+      <div className={`card ${activeSection == 'about' ? '' : 'is-active'}`} data-state={activeSection}>
         <div className="card-header">
           <div
             className="card-cover"
@@ -64,11 +63,7 @@ export default function Agendamento() {
             <div className="card-content">
               <div className="card-subtitle">Sobre mim</div>
               <p className="card-desc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                dapibus, tellus ac cursus commodo, tortor mauris condimentum
-                nibh, ut fermentum massa justo sit amet risus. Maecenas sed diam
-                eget risus varius blandit sit amet non magna. Morbi leo risus,
-                porta ac consectetur ac, vestibulum at eros.
+                {paramAbout}
               </p>
             </div>
           )}

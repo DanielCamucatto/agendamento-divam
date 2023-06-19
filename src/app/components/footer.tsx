@@ -5,7 +5,7 @@ import Icon from "./icon";
 
 const Footer = () => {
     return (
-        <FooterNav className="footer">
+        <FooterNav>
             <Icon fill='#fff'></Icon>
             <FooterStyles.Ul>
                 <FooterStyles.Li>

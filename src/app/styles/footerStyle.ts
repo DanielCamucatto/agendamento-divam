@@ -4,6 +4,7 @@ import theme from './theme';
 export const FooterNav = styled.footer`
     display: flex;
     justify-content: center;
+    align-items: center;
     background-color: ${theme.colorBlack};
     padding: 20px 0;
 `;

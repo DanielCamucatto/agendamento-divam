@@ -1,12 +1,35 @@
 import { createGlobalStyle } from 'styled-components';
 import theme from './theme';
-import Navbar from '../components/navbar';
 
 const GlobalStyles = createGlobalStyle`
+
+  *::-webkit-scrollbar {
+    width: 10px;
+  } 
+
+  *::-webkit-scrollbar-track{
+    background: ${theme.colorWhite};
+    width: 10px;
+    border: 2px solid ${theme.colorWhite}; 
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, ${theme.primaryColor}, ${theme.secondColor}, ${theme.varFourColor});
+    border: 1px solid #f1f1f1;
+    border-radius: 30px
+  }
+
   body {
     margin: 0;
     padding: 0;
-    font-family: "Helvetica Neue", Georama, sans-serif
+    font-family: "Helvetica Neue", Georama, sans-serif;
+    display: grid;
+    grid-template-rows: 1fr 3fr 1fr;
+    height: 100vh
+  }
+
+  .content-wrapper{
+    padding-bottom: 2.5rem;
   }
 
   .grid-container {
@@ -23,6 +46,10 @@ const GlobalStyles = createGlobalStyle`
 
   .main {
     background-color: #e6e6e6;
+  }
+
+  .footer {
+
   }
 
   .main-title {
@@ -65,9 +92,6 @@ const GlobalStyles = createGlobalStyle`
     font-weight: bold;
   }
 
-  .footer {
-    background-color: #d9d9d9;
-  }
 `;
 
 export default GlobalStyles;

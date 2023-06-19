@@ -16,13 +16,13 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <GlobalStyles />
+    <html lang="pt-BR">
+      <GlobalStyles />
+      <body>
         <Navbar></Navbar>
         {children}
         <Footer></Footer>
-        </body>
+      </body>
     </html>
   )
 }

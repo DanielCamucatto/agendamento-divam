@@ -4,6 +4,7 @@ import theme from './theme';
 export const Nav = styled.nav`
     display: flex;
     justify-content: center;
+    align-items: center;
     background-color: linear-gradient(90deg, ${theme.primaryColor}10%, ${theme.secondColor} 90%);
 `;
 

@@ -40,3 +40,7 @@ export const PsychologistTemp = styled.p`
   font-size: 14px;
   color: #888;
 `;
+export const PsychologistAbout = styled.p`
+  font-size: 14px;
+  color: #888;
+`;

@@ -59,7 +59,7 @@ const Main: React.FC = () => {
           type="text"
           placeholder="Procure seu terapeuta aqui"
           handleFilterChange={handleFilterChange}
-          handleInvalidInput={handleInvalidInput} // Aqui você pode adicionar uma função caso deseje tratar o evento de entrada inválida
+          handleInvalidInput={handleInvalidInput} 
         />
         <CustomButton onClick={handleButtonClick}>Buscar</CustomButton>
       </div>
