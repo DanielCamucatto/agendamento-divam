@@ -76,11 +76,11 @@ export default function Agendamento() {
               </p>
               <DateTimeInput type="datetime-local" onChange={handleDateTimeChange} />
               {selectedDateTime && (
-                <div>
+                <div className="d-flex-column">
                   <p className="text-color-primary">Você escolheu {selectedDateTime}.</p>
                   <p className={selectedOption === 'Aceitar' ? 'accept' : 'decline'}>{message}</p>
-                  <button onClick={handleAccept}>Confirmar</button>
-                  <button onClick={handleDecline}>Rejeitar</button>
+                  <button className="confirm" onClick={handleAccept}>Confirmar</button>
+                  <button className="reject" onClick={handleDecline}>Rejeitar</button>
                 </div>
               )}
             </div>

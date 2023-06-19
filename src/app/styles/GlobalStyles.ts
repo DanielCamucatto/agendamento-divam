@@ -79,6 +79,12 @@ const GlobalStyles = createGlobalStyle`
     align-items: center;
   }
 
+  .d-flex-column {
+    display:flex; 
+    flex-direction: column; 
+    justify-content: center;
+  }
+
   .accept {
     color: ${theme.colorAccept}
   }
@@ -86,6 +92,39 @@ const GlobalStyles = createGlobalStyle`
   .decline {
     color: ${theme.dangerColor}
   }
+
+  .confirm {
+    background-color: ${theme.colorAccept};
+    color: ${theme.colorWhite};
+    padding: 10px 20px;
+    border: 1px solid transparent; 
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all .2s;
+
+    &:hover {
+      background-color: transparent;
+      color: ${theme.colorAccept};
+      border: solid 1px ${theme.colorAccept};
+    }
+  }
+
+  .reject {
+    background-color: transparent; 
+    border: solid 1px ${theme.dangerColor}; 
+    color: ${theme.dangerColor};
+    padding: 10px 20px;
+    border-radius:10px;
+    cursor: pointer;
+    transition: all .2s;
+
+    &:hover {
+      background-color: ${theme.dangerColor};
+      color: ${theme.colorWhite};
+    }
+  }
+  
 
   .text-color-primary {
     color: ${theme.primaryColor};
